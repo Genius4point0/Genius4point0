@@ -1,0 +1,26 @@
+import pyttsx3
+import webbrowser
+import openai
+
+def say(text):
+    engine = pyttsx3.init()
+    engine.say(text)
+    engine.runAndWait()
+
+def redirect_to_solution():
+    # Provide predefined responses or generate responses using other methods
+    response = "Here are some fun activities you can do: Outdoor Picnic: Gather some snacks, sandwiches, and drinks, and head to a nearby park for a picnic. Bring along some outdoor games like frisbee, badminton, or a football to play. Board Game Night: Invite friends or family over for a board game night. Choose from classics like Monopoly, Scrabble, or try out newer games like Settlers of Catan or Ticket to Ride."
+
+    print("Hey,I have some suggestions for you...")
+    say("Here are some suggestions: " + response)
+
+    # Ask for user feedback
+    feedback = input("Are you satisfied with the solution? (yes/no): ").lower()
+    if feedback == 'no':
+        print("Redirecting you to a Google search for more ideas...")
+        webbrowser.open("https://www.google.com/search?q=fun+activities")
+
+if __name__ == '__main__':
+    print('Supersquad')
+    say("Hello, I'm SuperSquad,I apologize for incovenience.")
+    redirect_to_solution()
