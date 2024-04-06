@@ -1,0 +1,50 @@
+*{
+    box-sizing: border-box;
+}
+
+
+.container{
+    height:400px;
+    
+    display: flex;    
+    flex-direction: row;
+    flex-wrap : wrap;
+    justify-content: center;
+    align-items: center;
+
+    align-content:flex-start;
+
+    
+    
+
+
+}
+.box{
+    border:1px solid brown;
+    background-color: aqua;
+    width:150px;
+    flex-basis:50%
+
+   
+
+    
+}
+
+#box1{
+    order:1;
+    /*align-self: stretch;*/
+    /*flex-basis:100px;*/
+    /*flex-grow:1;*/
+    /*flex-shrink: 4;*/
+}
+
+#box3{
+    order:8;
+    flex-align: flex-start;
+    /*flex-grow:1;*/
+    /*flex-shrink:2;*/
+}
+
+
+
+
